@@ -1,0 +1,168 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{pdfpages}
+\usepackage{threeparttablex}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage[left=2.80cm, right=2.80cm, top=2.50cm, bottom=2.50cm]{geometry}
+
+\begin{document}
+	\thispagestyle{empty}
+
+	
+	\begin{figure} [H]
+		%\centering
+		\includegraphics[width = 0.3 \textwidth]{LogoMLU.pdf}
+	\end{figure}
+	Martin Luther University Halle-Wittenberg 
+	
+	Chair of Economics, especially Macroeconomics
+	
+	Professor Dr Oliver Holtemöller
+	
+	\vspace*{4.75cm}
+	\begin{center}
+		{\Huge\bf Advanced Macroeconomics}\\ \vspace*{.5cm}
+		{\Large\bf Exam Winter 20YY/YY}\\ \vspace*{.5cm} 
+		{\large\bf Problem Set No. X - n}\\ \vspace*{.5cm}		
+	\end{center}
+	
+	
+	\vspace*{4.75cm}
+	
+	************************************** \\
+	
+	************ Student Data ************ \\
+	Morteza Motegh
+	student mail
+	student ID
+	problem set ID) \\
+	**************************************
+	
+	\vspace*{1cm}
+	
+	********* Date of Assignment ********
+	
+\newpage
+
+\pagenumbering{arabic}
+\tableofcontents
+\listoffigures 
+\listoftables
+
+\newpage
+\thispagestyle{plain}
+	
+\section*{Overview of Code Files}
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{File Name} & \textbf{File Description} & \textbf{Reference Files} \\ \hline
+			\makecell{\texttt{Data.m} } & \makecell{Solves Tasks x \& x: \\ loads Eurostat data from csv, \\ creates variables for (...)} & 	\makecell{\texttt{LectureCode\_1.m} } \\ \hline
+			{\texttt{rbc.mod}} & \makecell{Solves Task x: \\ deterministic simulation of TFP shock \\ in standard RBC model; \\ (...) } & \makecell{\texttt{lecturemodel.mod}} \\ \hline
+			\makecell{ \texttt{IRF.m}} & \makecell{Solves Task x: \\ produces plots (...) \\ and investment share depending \\ on time preference rate from  {\texttt{rbc.mod}} } 	& \makecell{\texttt{LectureCode\_2.m}} \\ \hline
+			... & ... & ... \\ \hline
+		\end{tabular}  
+		\caption{Table of code files. }
+	\end{center}
+\end{table}
+
+\section*{Data Section}
+The raw data used for this analysis are from (...). Table 2 lists the specific empirical observations, containing an explanation and the respective source.
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Data ID} & \textbf{Data Description} & \textbf{Data Source} \\ \hline
+			\texttt{csh\_i} & \makecell{Real share of gross \\capital formation at current PPPs \\ PPPs: purchasing power parities} & PWT 10.0 \\ \hline
+			\texttt{cgdpo} & \makecell{Output-side real GDP\\ at current PPPs (in mil. 2017 USD) \\ PPPs: purchasing power parities} & PWT 10.0 \\ \hline
+		\end{tabular}  
+		\caption{Table of data.}
+	\end{center}
+\end{table}
+As time period the years xxxx to xxxx are chosen, observations are given in quarterly frequency. Section 1 contains further information on the way how the data were accessed, section 2 explains how the specific variables are calculated from these raw data. Chosen units are (...). These data are provided in \texttt{Data.xlsx}.
+
+\newpage
+
+\section{Access Empirical Data}
+The used data (see Table 2) can be downloaded from the website ..., the newest available version is xx. (...) See the data section for further descriptions. The data are cleaned by (...).
+
+\section{Title Task 2}
+For solving this task with \texttt{Dynare}\footnote{See \url{https://www.dynare.org}. } in \texttt{Octave}\footnote{See \url {https://octave.org/index}.} or \texttt{Matlab}\footnote{See \url{https://de.mathworks.com/products/matlab.html}.} the lecture file \\ \texttt{lecturemodel\_1.mod} which is used for simulating the stochastic extended Ramsey growth model with endogenous labor supply is adjusted in steps as follows:
+\begin{itemize}
+	\item Add an additional endogenous variable for (...).
+	\item Add an equation for (...)
+	\item Add an initial guess for (...)
+	\item Add a \texttt{for} loop following instructions in the dynare manual\footnote{See \url{https://www.dynare.org/manual/} for writing loops in \texttt{Dynare}.}:
+	\begin{itemize}
+		\item[1.] Create a vector (...)
+		\item[2.] Write a \texttt{for} loop that iterates for (...)
+	\end{itemize}
+	\item Add plot settings as learned in the lecture\footnote{See for example \texttt{Plot\_PWT\_Data\_v5.m}.} in order to get a graphical presentation of (...).
+\end{itemize}
+This plot is shown in Figure 1 and produced by code file (...) . One can see that the (...). From an economic perspective this can be explained by (...).
+\begin{figure} [H]
+	\centering
+	\includegraphics[width = 1 \textwidth]{fig_rho.pdf}
+	\label{fig:locally}
+	\caption{Dependency of steady state investment share on time preference rate.}
+\end{figure}
+
+\section{Title Task 3}
+For empirical parts of this task data from Penn World Table (PWT) Version 10.0 in yearly frequency for Argentina and the \texttt{Octave} code file \texttt{lecturemodel\_1.mod} from the lecture are used and as country Argentina (PWT code \texttt{ARG}) is chosen.\footnote{See \url{https://www.rug.nl/ggdc/productivity/pwt/?lang=en} for PWT 10.0 supplied by Groningen Growth and Development Center.} The code \texttt{Data.m} is structured as follows, note here that this code is also used for task 3 and that (...):\\
+\begin{itemize}
+	\item Add some variables (additionially to existing from the lecture file) for deciding about actions that should be done (set them equal to 0 in order to prevent command execution); these variables are:
+	\begin{itemize}
+		\item \texttt{ChooseCountry}: a subsample for the specific country is produced (adjust command \texttt{Code = 'ARG';} depending on the country, here Argentina) 
+		\item (...)
+	\end{itemize}
+		\item Respective commands follow in \texttt{for} loops. For further information see comments in the code file.
+\end{itemize}
+As data for real investment share the PWT variable \texttt{csh\_i} is used. It is the share of gross capital formation at current PPPs (purchasing power parities).\footnote{Further information on PWT can be found in Feenstra et al. (2013), in particular on p. 2 and p. 32.} Figure 2 shows (...)\\
+As second part of this task the theoretical model (...).
+
+\section{(...)}
+(...)
+
+\newpage
+
+\section{Sources}
+\subsubsection*{Software}
+	\url{https://www.dynare.org} \\
+	\url{https://de.mathworks.com/products/matlab.html} \\
+	\url {https://octave.org/index}\\
+ ...
+\subsubsection*{Online Sources}
+\url{https://www.rug.nl/ggdc/productivity/pwt/?lang=en} \\
+...
+\subsubsection*{Lecture Material}
+Holtemöller, O., 2024. Advanced Macroeconomics. Chapter x. Lecture Slides. p. xx-xx \\
+...\\
+\texttt{LectureCode\_1.m} \\
+\texttt{LectureCode\_2.m} \\
+\texttt{lecturemodel\_1.mod} \\
+...
+% or use bibliography with source file
+
+\section*{Declaration of Independence}
+I hereby declare that I have worked independently on this problem set. If I have received help, I have explicitly referred to it. \\
+\\
+Date, Name
+
+\end{document}
