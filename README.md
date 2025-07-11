@@ -1,5 +1,3 @@
-Here’s a polished `README.md` for your repository, combining clarity, structure, and professional presentation while preserving your original content:
-
 ---
 
 # **Urban Rental Price Analysis: Berlin’s WG-Gesucht Market**  
@@ -108,5 +106,3 @@ Full results in [`results/README.md`](./results/README.md) and Jupyter notebooks
 **🔗 License**: [MIT](LICENSE) | **⚠️ Note**: Large datasets excluded (hosted externally).  
 
 --- 
-
-This `README.md` ensures clarity, reproducibility, and academic rigor. Let me know if you’d like to emphasize any specific findings or adjust the structure further!
