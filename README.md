@@ -1,4 +1,4 @@
-# **Urban Rental Price Analysis:  
+# Urban Rental Price Analysis:  
 ***Berlin’s WG-Gesucht Market***  
 
 ## **📌 Introduction**  
