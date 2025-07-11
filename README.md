@@ -33,14 +33,17 @@ Prior research highlights location, amenities, and neighborhood characteristics 
 **Regression Models**:  
 #### **Price Determinants**  
 **Simple**:  
+
 $$  
 Price = \alpha_0 + \alpha_1 \text{Size} + \alpha_2 \text{WG type} + \alpha_3 \text{Duration} + U  
 $$  
 
 **In-Depth**:  
+
 $$  
 Price = \alpha_0 + \sum_{i=1}^8 \alpha_i X_i + U  
 $$  
+
 *(See full equation in [Results](#-results))*  
 
 #### **Listing Duration**  
