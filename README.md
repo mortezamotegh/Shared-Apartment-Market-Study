@@ -42,6 +42,7 @@ $$
 
 #### **Listing Duration**  
 **Simple**:  
+
 $$  
 \text{Duration} = \alpha_0 + \alpha_1 \text{Size} + \alpha_2 \text{WG type} + \alpha_3 \text{Price} + U  
 $$  
