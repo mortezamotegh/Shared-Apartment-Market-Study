@@ -1,10 +1,6 @@
----
-
 # **Urban Rental Price Analysis: Berlin’s WG-Gesucht Market**  
 
-**Author**: Morteza Motegh
 
----
 
 ## **📌 Introduction**  
 This repository presents a data-driven case study analyzing the determinants of rental prices and listing durations for shared apartments (*Wohngemeinschaften*, WGs) in Berlin, using scraped data from [WG-Gesucht.de](https://www.wg-gesucht.de/). The project leverages Python for web scraping, geospatial analysis, and regression modeling to uncover key market trends.  
